@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page Template</title>
+  <link href="https://fonts.google.com/specimen/Pacifico?preview.text=Say%20Yes" rel="stylesheet">
+
+<!-- --------------------------------home.html css-------------------------------------------------------------- -->
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+
+    .container {
+      width: 100%;
+      background-color: white;
+      text-align: center;
+    
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 100px;
+      background: white;
+    }
+
+    .navbar a {
+      color: #333;
+      text-decoration: none;
+      margin: 10px 15px;
+      font-weight: bold;
+    }
+
+    .logo {
+      font-size: 15px;
+      font-weight: bold;
+      height: 100%;
+    }
+
+    
+    .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1px 50px;
+  background: white;
+  position: relative;
+  top: -8px;
+}
+
+.btn-primary.login-btn {
+  position: absolute;
+  right: -8px;
+  background-color: #00d1d1;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-primary.login-btn:hover {
+  background-color: white;
+  color: #00d1d1;
+  border: 2px solid #00d1d1;
+}
+.btn-primary.find {
+  position: absolute;
+  top: 58%;
+  right: 72%;
+  background-color: #00d1d1;
+  color: white;
+  border: none;
+  padding: 3px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+  .image-carousel {
+  position: relative;
+  width: 100%;
+  top: -5px;
+  max-width: 1000px;
+  overflow: hidden;
+  margin: auto;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%
+}
+
+.carousel-images img {
+  width: 50%;
+  flex-shrink: 0;
+  height: 550px;
+  object-fit: cover;
+}
+.carousel-images .carousel-item:first-child img {
+  opacity: 0.6; 
+}
+
+.carousel-item.active img {
+  opacity: 1; 
+}
+.carousel-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel-dots .dot {
+  width: 8px;
+  height: 8px;
+  margin: 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.carousel-dots .dot.active {
+  background-color: black;
+
+}
+.carousel-item {
+      position: relative;
+      width: 100%;
+      display: none; 
+    }
+
+.carousel-item.active {
+      display: block; 
+    }
+.carousel-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); 
+  z-index: 100;
+}
+.carousel-text {
+  position: absolute;
+  top: 10%;
+  bottom: 16px;
+  right: 57%;
+  transform: translateX(-50%);
+  color: black;
+  font-size: 50px; 
+  font-family: cursive;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  letter-spacing: 2px; 
+}
+.carousel-text1 {
+  position: absolute;
+  top: 22%;
+  bottom: 20px;
+  right: 32%;
+  transform: translateX(-50%);
+  color: black;
+  font-weight: bold;
+  font-size: 30px; /* Larger text */
+  font-family: serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  letter-spacing: 2px;
+}
+.carousel-text2 {
+  position: absolute;
+  top: 35%;
+  bottom: 20px;
+  right: 18%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 15px; 
+  font-family: serif;
+  letter-spacing: 1px;
+}
+.carousel-text3 {
+  position: absolute;
+  top: 38%;
+  bottom: 20px;
+  right: 27.5%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 15px; 
+  font-family: serif;
+  letter-spacing: 1px;
+}
+.carousel-text4 {
+  position: absolute;
+  top: 41%;
+  bottom: 20px;
+  right: 66.5%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 15px; /* Larger text */
+  font-family: serif;
+  letter-spacing: 1px;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  transform: translateY(-50%);
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+.icons-section {
+  top: -5px;
+  right: 100%;
+  padding: auto;
+  margin-top: -1%;
+}
+
+  </style>
+</head>
+<!-- --------------------------------------body-section----------------------------- -->
+<body>
+  
+  <div class="container">
+    {% load static %}
+    <div class="navbar">
+      <div class="logo">
+        <img src="{% static 'images/travel.jpeg' %}" alt="" style="width: 130px; height: 90px;">
+    </div>
+      <nav>
+        <a href="{% url 'home' %}">Home </a>
+        <a href="{% url 'destination' %}">Destination</a>
+        <a href="{% url 'contact' %}">Contact Us</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="#">Blog</a>
+        <a href="{% url 'signup' %}">Sign Up</a>
+        <a href="{% url 'login' %}" alt=""><button class="btn-primary login-btn">Log In</button></a>
+      </nav>
+    </div>
+  <div class="image-carousel">
+    <div class="carousel-images">
+      
+      <img src="{% static 'images/tour.jpeg' %}" alt="" style="width: 100%; height: 550px;" opac>
+      <div class="carousel-text">Say yes</div> 
+      <div class="carousel-text1">TO YOUR VACATION</div>
+      <div class="carousel-text2">Lorem ipsum dolor sit amet, consecteture adipiscing elite, sed diam</div>
+      <div class="carousel-text3">nonummy nibuh euismod tincidunt ut laoreet dolore magna</div>
+      <div class="carousel-text4">aliquam erat volutpat.</div>
+      <div class="button1">
+        <a href="{% url 'login' %}" alt=""><button class="btn-primary find">FIND OUT MORE</button></a>
+
+      </div>
+      <img src="{% static 'images/2.jpeg' %}" alt="" style="width: 100%; height: 550px;">
+      <img src="{% static 'images/3.jpeg' %}" alt="" style="width: 100%; height: 550px;">
+      <img src="{% static 'images/4.jpeg' %}" alt="" style="width: 100%; height: 550px;">
+      <img src="{% static 'images/tourist1.jpeg' %}" alt="" style="width: 100%; height: 550px;">
+      <img src="{% static 'images/travel.jpeg' %}" alt="" style="width: 100%; height: 550px;">
+      
+    </div>
+  
+    <div class="carousel-dots">
+
+    </div>
+  </div>
+  </div>
+  <form method="POST" action="">
+    {% csrf_token %}
+    <div class="icons-section">
+        {% include 'tourist/icons.html' %}
+    </div>
+</form>
+</html>
+<!-- --------------------------------------home.html js for slide dots--------------------------------------------------------- -->
+  <script>
+    let currentIndex = 0;
+    
+    const images = document.querySelectorAll('.carousel-images img');
+    const dotsContainer = document.querySelector('.carousel-dots');
+    
+    images.forEach((_, index) => {
+      const dot = document.createElement('div');
+      dot.classList.add('dot');
+      dot.addEventListener('click', () => moveToSlide(index));
+      dotsContainer.appendChild(dot);
+    });
+    
+    function updateCarousel() {
+      document.querySelector('.carousel-images').style.transform = `translateX(-${currentIndex * 100}%)`;
+      document.querySelectorAll('.dot').forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentIndex);
+      });
+    }
+    
+    function moveToSlide(index) {
+      currentIndex = index;
+      updateCarousel();
+    }
+    
+    updateCarousel();
+    </script>
+    
+   

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Destinations | TravelWorld</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">TravelWorld</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destination.html">Destinations</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Discover Stunning Destinations</h1>
+            <p>Explore beautiful places around the globe and plan your next adventure!</p>
+        </div>
+    </section>
+
+    
+    <section class="destination-grid">
+        <h2>Popular Destinations</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="images/paris.jpg" alt="Paris">
+                <h3>Paris, France</h3>
+                <p>The city of lights and love, featuring iconic landmarks like the Eiffel Tower and Louvre Museum.</p>
+            </div>
+            <div class="card">
+                <img src="images/maldives.jpg" alt="Maldives">
+                <h3>Maldives</h3>
+                <p>Relax in paradise with crystal-clear waters and luxurious overwater bungalows.</p>
+            </div>
+            <div class="card">
+                <img src="images/kyoto.jpg" alt="Kyoto">
+                <h3>Kyoto, Japan</h3>
+                <p>Experience serene temples, traditional tea houses, and vibrant cherry blossoms.</p>
+            </div>
+            <div class="card">
+                <img src="images/nyc.jpg" alt="New York City">
+                <h3>New York City, USA</h3>
+                <p>Enjoy the buzz of the Big Apple with its skyscrapers, Broadway, and diverse culture.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 TravelWorld. All rights reserved.</p>
+        <ul class="social-links">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+        </ul>
+    </footer>
+
+    <!-- css for destination.html -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .hero {
+            background: url('images/hero-bg.jpg') no-repeat center center/cover;
+            color: white;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .destination-grid {
+            padding: 20px;
+        }
+        .grid {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+            width: 300px;
+            text-align: center;
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .card h3 {
+            margin: 10px 0;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icons Section</title>
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"> -->
+    
+    <style>
+    .icon-box i {
+        font-size: 10px; /* Adjust the font size to make the icons smaller */
+        color: #00d1d1; /* Keep the color for consistency */
+        margin-bottom: 50px; /* Space between the icon and the heading */
+    }
+    
+    
+    .icon-box h3 {
+    
+        font-size: 10px; /* Adjust heading size for better proportion */
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    
+    .icon-box select,
+    .icon-box input {
+        padding: 5px; /* Reduce padding for input and select fields */
+        margin-top: 04px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        width: 90%;
+         /* Slightly smaller width to fit the new dimensions */
+    }
+    
+    .icons-container {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 20px;
+    }
+    .register-box {
+    text-align: center;
+    margin-top: 15px;
+    
+}
+
+.btn-register {
+    background-color: #00d1d1;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 15px;
+    right: 18%;
+    top: 95%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-register:hover {
+    background-color: #007a7a;
+}
+
+</style>
+    
+</head>
+<body>
+   
+    
+ <div class="icons-container">
+    <form action="{% url 'register_booking' %}" method="POST">
+        {% csrf_token %}
+        <div class="icon-box">
+            <i class="fas fa-location-arrow"></i>
+            <h5>From</h5>
+            <select name="from_location" id="from_location">
+                <option value="" disabled selected>Select a city</option>
+                {% for city in cities %}
+                    <option value="{{ city }}">{{ city }}</option>
+                {% endfor %}
+            </select>
+        
+        </div> 
+
+    <!-- To Icon -->
+    <div class="icon-box">
+        <i class="fas fa-location-dot"></i>
+        <h5>To</h5>
+        <select name="to_location" id="to_location">
+        <option value="" disabled selected>Select a city</option>
+        {% for city in cities %}
+            <option value="{{ city }}">{{ city }}</option>
+        {% endfor %}
+        </select>
+    </div>
+
+    <!-- Date Icon -->
+    <div class="icon-box">
+        <i class="fas fa-calendar-alt"></i>
+        <h5>Date</h5>
+        <input type="date" name="travel_date" id="travel_date" required>
+    </div>
+    <!-- Register Button -->
+    <div class="register-box">
+        <button type="submit" class="btn-register">Register</button>
+    </div>
+    </form>
+</div>
+</div>
+
+</body>
+</html>
